@@ -3,7 +3,6 @@ import Head from 'next/head';
 
 import clsx from 'clsx';
 
-import Nav from '@/_components/Nav';
 import '@/globals.css';
 
 const dm_sans = DM_Sans({ subsets: ['latin'], variable: '--body' });
@@ -22,10 +21,7 @@ export default function Layout({ Component, pageProps }) {
           'min-h-screen px-4 antialiased transition-colors dark:bg-slate-900 dark:text-white'
         )}
       >
-        <Nav />
-        <main className="mx-auto max-w-prose py-16">
-          <Component {...pageProps} />
-        </main>
+        <Component {...pageProps} />
       </div>
     </>
   );

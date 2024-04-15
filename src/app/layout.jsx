@@ -4,8 +4,6 @@ import clsx from 'clsx';
 
 import '@/globals.css';
 
-import Nav from '../_components/Nav';
-
 const dm_sans = DM_Sans({ subsets: ['latin'], variable: '--body' });
 const jetbrains_mono = JetBrains_Mono({ subsets: ['latin'], variable: '--mono' });
 
@@ -24,8 +22,7 @@ export default function RootLayout({ children }) {
           'min-h-screen px-4 antialiased transition-colors dark:bg-slate-900 dark:text-white'
         )}
       >
-        <Nav />
-        <main className="mx-auto max-w-prose py-16">{children}</main>
+        {children}
       </body>
     </html>
   );

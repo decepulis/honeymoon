@@ -7,6 +7,7 @@ import path from 'path';
 import Code from '@/_components/Code';
 import CodeWrapper from '@/_components/CodeWrapper';
 import Comments from '@/_components/Comments';
+import Nav from '@/_components/Nav';
 import UnusedComponent from '@/_components/UnusedComponent';
 import getComments from '@/_utils/getComments';
 
@@ -25,16 +26,19 @@ export async function getServerSideProps() {
 export default function Page({ mdxSource, comments }) {
   return (
     <>
-      <MDXRemote
-        {...mdxSource}
-        components={{
-          pre: CodeWrapper,
-          code: Code,
-          p: ({ children }) => <p className="mb-4">{children}</p>,
-          UnusedComponent,
-        }}
-      />
-      <Comments comments={comments} />
+      <Nav />
+      <main className="mx-auto max-w-prose py-16">
+        <MDXRemote
+          {...mdxSource}
+          components={{
+            pre: CodeWrapper,
+            code: Code,
+            p: ({ children }) => <p className="mb-4">{children}</p>,
+            UnusedComponent,
+          }}
+        />
+        <Comments comments={comments} />
+      </main>
     </>
   );
 }
