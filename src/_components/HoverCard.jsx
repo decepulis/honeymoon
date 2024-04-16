@@ -10,7 +10,7 @@ export default function HoverCard({ children, contents }) {
       <LibHoverCard.Trigger asChild>{children}</LibHoverCard.Trigger>
       <LibHoverCard.Portal>
         <LibHoverCard.Content sideOffset={5}>
-          <div className="w-80 rounded bg-white p-4 shadow-lg">{contents}</div>
+          <div className="max-w-80 rounded bg-white p-4 shadow-lg dark:bg-neutral-800">{contents}</div>
         </LibHoverCard.Content>
       </LibHoverCard.Portal>
     </LibHoverCard.Root>

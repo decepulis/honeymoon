@@ -1,11 +1,12 @@
 import { getHighlighter } from 'shiki';
+import { twMerge } from 'tailwind-merge';
 
 // this example is a bit contrived.
 // if you actually want to ship shiki to the client (or the edge for that matter)
 // investigate narrowing the bundle https://shiki.style/guide/bundles
 
 const highlighter = await getHighlighter({
-  themes: ['github-light', 'github-dark'],
+  themes: ['solarized-light', 'solarized-dark'],
   langs: ['javascript'],
 });
 
@@ -18,8 +19,8 @@ export default function Code({ className, children, ...rest }) {
     const html = highlighter.codeToHtml(children, {
       lang: match[1],
       themes: {
-        light: 'github-light',
-        dark: 'github-dark',
+        light: 'solarized-light',
+        dark: 'solarized-dark',
       },
       // out of the box, shiki will try and wrap the code in a pre and code tag.
       // since we're already doing that with mdx, we use transformers to change the tags.
@@ -35,10 +36,16 @@ export default function Code({ className, children, ...rest }) {
         },
       ],
     });
-    return <code {...rest} dangerouslySetInnerHTML={{ __html: html }} />;
+    return (
+      <code
+        className={twMerge('font-mono text-sm leading-relaxed', className)}
+        {...rest}
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    );
   }
   return (
-    <code className={className} {...rest}>
+    <code className={twMerge('font-mono text-sm leading-relaxed', className)} {...rest}>
       {children}
     </code>
   );

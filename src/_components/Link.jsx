@@ -10,7 +10,7 @@ export default async function Link({ className, ...props }) {
     <HoverCard contents={<LinkPreview href={props.href} />}>
       <NextLink
         className={twMerge(
-          'text-blue-700 underline underline-offset-4 hover:no-underline focus:no-underline',
+          'text-lime-700 underline underline-offset-4 hover:no-underline focus:no-underline dark:text-lime-200',
           className
         )}
         {...props}

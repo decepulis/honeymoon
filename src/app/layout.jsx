@@ -1,11 +1,13 @@
-import { DM_Sans, JetBrains_Mono } from 'next/font/google';
+import { DM_Mono, JetBrains_Mono, Playfair_Display, Poppins, Sacramento } from 'next/font/google';
 
 import clsx from 'clsx';
 
 import '@/globals.css';
 
-const dm_sans = DM_Sans({ subsets: ['latin'], variable: '--body' });
-const jetbrains_mono = JetBrains_Mono({ subsets: ['latin'], variable: '--mono' });
+const body = Poppins({ weight: ['300', '600'], subsets: ['latin'], variable: '--body' });
+const script = Sacramento({ weight: '400', subsets: ['latin'], variable: '--script' });
+const display = Playfair_Display({ subsets: ['latin'], variable: '--display' });
+const mono = DM_Mono({ weight: '400', subsets: ['latin'], variable: '--mono' });
 
 /* @type {import('next').Metadata} */
 export const metadata = {
@@ -17,9 +19,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={clsx(
-          dm_sans.variable,
-          jetbrains_mono.variable,
-          'min-h-screen px-4 antialiased transition-colors dark:bg-slate-900 dark:text-white'
+          body.variable,
+          script.variable,
+          display.variable,
+          mono.variable,
+          'min-h-screen bg-white px-4 font-body antialiased dark:bg-neutral-900 dark:text-white'
         )}
       >
         {children}

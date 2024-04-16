@@ -5,6 +5,7 @@ const config: Config = {
   darkMode: 'selector',
   theme: {
     fontFamily: {
+      script: ['var(--script)'],
       display: ['var(--display)'],
       body: ['var(--body)'],
       mono: ['var(--mono)'],

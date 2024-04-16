@@ -18,7 +18,7 @@ export default function Layout({ Component, pageProps }) {
         className={clsx(
           dm_sans.variable,
           jetbrains_mono.variable,
-          'min-h-screen px-4 antialiased transition-colors dark:bg-slate-900 dark:text-white'
+          'min-h-screen px-4 antialiased dark:bg-neutral-900 dark:text-white'
         )}
       >
         <Component {...pageProps} />
