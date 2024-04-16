@@ -2,7 +2,7 @@ import NextLink from 'next/link';
 
 import { twMerge } from 'tailwind-merge';
 
-export default async function Link({ className, ...props }) {
+export default function Link({ className, ...props }) {
   return (
     <NextLink
       className={twMerge(

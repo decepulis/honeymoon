@@ -44,7 +44,7 @@ export default function Page({ source, comments }) {
         <Comments comments={comments} />
       </main>
       <footer className="mx-auto flex max-w-3xl items-center justify-between gap-8 py-8">
-        <span className="font-script text-xl text-neutral-500 dark:text-neutral-300">Live, laugh, love</span>
+        <span className="font-script text-2xl text-neutral-500 dark:text-neutral-300">Live, laugh, love</span>
         <DarkModeToggle />
       </footer>
     </>
