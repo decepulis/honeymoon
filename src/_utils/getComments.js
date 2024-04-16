@@ -1,8 +1,3 @@
-// often, working with an api requires a secret key,
-// so we want to restrict it to the server side.
-// for that, we use server-only
-import 'server-only';
-
 import slowThingsDown from './slowThingsDown';
 
 export default async function getComments() {

@@ -18,7 +18,10 @@ export default function DarkModeToggle() {
   }, [isDark]);
 
   return (
-    <button className="rounded-full bg-slate-800 p-2 text-xs" onClick={() => setIsDark((d) => !d)}>
+    <button
+      className="rounded-full bg-emerald-100 p-2 text-xs dark:bg-emerald-900"
+      onClick={() => setIsDark((d) => !d)}
+    >
       {isDark ? '🌙' : '☀️'}
     </button>
   );

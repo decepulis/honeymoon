@@ -12,9 +12,10 @@ export default function LikeButton({ id }) {
       <input type="hidden" name="id" value={id} />
       <button
         disabled={didLike}
+        onClick={() => setDidLike(true)}
         aria-label="Like comment"
         type="submit"
-        className="h-12 w-12 rounded-sm hover:bg-neutral-300/20 focus:bg-neutral-300/20"
+        className="h-12 w-12 rounded-sm hover:bg-slate-300/20 focus:bg-slate-300/20"
       >
         {didLike ? '❤️' : '🤍'}
       </button>

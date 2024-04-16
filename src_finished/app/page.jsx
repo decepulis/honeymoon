@@ -9,6 +9,7 @@ import Code from '@/_components/Code';
 import CodeWrapper from '@/_components/CodeWrapper';
 import Comments from '@/_components/Comments';
 import DarkModeToggle from '@/_components/DarkModeToggle';
+import H1 from '@/_components/H1';
 import Link from '@/_components/Link';
 import UnusedComponent from '@/_components/UnusedComponent';
 
@@ -18,23 +19,7 @@ export default async function Page() {
 
   return (
     <>
-      <header className="relative mx-auto mb-8 mt-16 max-w-prose text-balance text-center">
-        <p
-          className="font-script absolute inset-0 -z-10 flex items-center justify-center text-[12rem] text-lime-100 dark:text-lime-950"
-          aria-hidden
-        >
-          love
-        </p>
-        <h1 className="mb-4">
-          <span className="font-script block text-4xl">Our wedding</span>
-          <span className="block font-display text-6xl">
-            Server Components &amp;
-            <br />
-            Darius Cepulis
-          </span>
-        </h1>
-        <p className="font-display">April 20, 2024&ensp;|&ensp;React Miami</p>
-      </header>
+      <H1 />
       <main className="mx-auto max-w-prose">
         <MDXRemote
           source={source}
@@ -51,8 +36,8 @@ export default async function Page() {
           <Comments />
         </Suspense>
       </main>
-      <footer className="mx-auto flex max-w-4xl items-center justify-between gap-8 py-8">
-        <span className="text-neutral-500 dark:text-neutral-300">© 2024 Honeymoon.app</span>
+      <footer className="mx-auto flex max-w-3xl items-center justify-between gap-8 py-8">
+        <span className="font-script text-xl text-neutral-500 dark:text-neutral-300">Live, laugh, love</span>
         <DarkModeToggle />
       </footer>
     </>
