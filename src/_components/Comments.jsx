@@ -3,8 +3,8 @@ import LikeButton from '@/_components/LikeButton';
 export default function Comments({ comments }) {
   return (
     <section>
-      <h2 className="mb-4 mt-8 font-display text-2xl italic">Comments</h2>
-      <ul className="mb-4">
+      <h2 className="mb-4 mt-8 font-display text-2xl">Comments</h2>
+      <ul className="-mx-4 mb-4">
         {comments.map((comment) => (
           <li key={comment.id} className="mb-4 flex items-center gap-4 border-b pb-4">
             <LikeButton id={comment.id} />

@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 
 export default function LikeButton({ id }) {
@@ -22,7 +24,6 @@ export default function LikeButton({ id }) {
       disabled={didLike}
       onClick={like}
       aria-label="Like comment"
-      type="submit"
       className="h-12 w-12 rounded-sm hover:bg-emerald-200/20 focus:bg-emerald-200/20"
     >
       {didLike ? '❤️' : '🤍'}

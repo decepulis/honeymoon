@@ -14,9 +14,10 @@ import UnusedComponent from '@/_components/UnusedComponent';
 import getComments from '@/_utils/getComments';
 
 export async function getServerSideProps() {
-  // get mdx
+  // read markdown file
   const filePath = path.join(process.cwd(), `src/_posts/honeymoon.mdx`);
   const text = fs.readFileSync(filePath, 'utf-8');
+  // prepare the markdown file for rendering
   const source = await serialize(text);
 
   // get comments
@@ -35,8 +36,9 @@ export default function Page({ source, comments }) {
           components={{
             pre: CodeWrapper,
             code: Code,
-            h2: (props) => <h2 {...props} className="mb-4 mt-8 font-display text-2xl italic" />,
+            h2: (props) => <h2 {...props} className="mb-4 mt-8 font-display text-2xl " />,
             p: (props) => <p className="mb-4" {...props} />,
+            ul: (props) => <ul className="mb-4 list-disc pl-4" {...props} />,
             a: (props) => <Link {...props} />,
             UnusedComponent,
           }}

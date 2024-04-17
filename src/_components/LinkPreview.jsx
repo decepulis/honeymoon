@@ -4,9 +4,12 @@ const getMatch = (text, regex) => {
 };
 
 export default async function LinkPreview({ href }) {
+  // get html from href
   const linkPreview = await fetch(href);
-  const text = await linkPreview.text();
 
+  // get title, description, and image from the link preview
+  const text = await linkPreview.text();
+  // copilot wrote these regexes, so, check them before you use them in prod.
   const title = getMatch(text, /<title>(.*?)<\/title>/i);
   const description = getMatch(text, /<meta\s+name=["']description["']\s+content=["'](.*?)["']\s*\/?>/i);
   const ogImage = getMatch(text, /<meta\s+property=["']og:image["']\s+content=["'](.*?)["']\s*\/?>/i);

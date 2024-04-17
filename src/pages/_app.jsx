@@ -22,7 +22,7 @@ export default function Layout({ Component, pageProps }) {
           script.variable,
           display.variable,
           mono.variable,
-          'min-h-screen bg-white px-4 font-body antialiased dark:bg-neutral-900 dark:text-white'
+          'min-h-screen bg-white px-4 font-body antialiased selection:bg-amber-300/30 selection:text-black dark:bg-neutral-900 dark:text-white dark:selection:text-white'
         )}
       >
         <Component {...pageProps} />
