@@ -13,7 +13,6 @@
     "@radix-ui/react-hover-card": "^1.0.7",
     "clsx": "^2.1.0",
     "next": "^14.2.1",
-    "next-mdx-remote": "^4.4.1",
     "react": "^18",
     "react-dom": "^18",
     "server-only": "^0.0.1",

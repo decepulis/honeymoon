@@ -3,10 +3,13 @@
 import { useState } from 'react';
 
 export default function LikeButton({ id }) {
-  const [didLike, setDidLike] = useState(false);
+  const [markAsLiked, setMarkAsLiked] = useState(false);
 
   const like = () => {
-    setDidLike(true);
+    // update UI
+    setMarkAsLiked(true);
+
+    // Talk to server
     // at this point, in the pages directory,
     // I'd probably set up an API route in /pages/api/like/[id].js
     // and then POST to that API from this function
@@ -21,12 +24,12 @@ export default function LikeButton({ id }) {
 
   return (
     <button
-      disabled={didLike}
+      disabled={markAsLiked}
       onClick={like}
       aria-label="Like comment"
       className="h-12 w-12 rounded-sm hover:bg-emerald-200/20 focus:bg-emerald-200/20"
     >
-      {didLike ? '❤️' : '🤍'}
+      {markAsLiked ? '❤️' : '🤍'}
     </button>
   );
 }
