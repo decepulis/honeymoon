@@ -12,7 +12,8 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Need to copy paste?
-I'm going to paste a VSCode Live Share link here
+Here's a VSCode live share link. idk if this is gonna work, but, here's hoping!
+https://prod.liveshare.vsengsaas.visualstudio.com/join?A43D5F8BF7029712BD5729A180611D771921
 
 ## Attribution
 
