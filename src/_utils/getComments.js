@@ -1,5 +1,4 @@
-import 'server-only';
-
+// import 'server-only';
 import slowThingsDown from './slowThingsDown';
 
 export default async function getComments() {
