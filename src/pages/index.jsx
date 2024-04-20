@@ -5,6 +5,8 @@ import H1 from '@/_components/H1';
 import UnusedComponent from '@/_components/UnusedComponent';
 import getComments from '@/_utils/getComments';
 
+// import { Suspense } from 'react'
+
 export async function getServerSideProps() {
   const comments = await getComments();
   return { props: { comments } };

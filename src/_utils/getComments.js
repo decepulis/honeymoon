@@ -1,6 +1,6 @@
-import slowThingsDown from './slowThingsDown';
+import 'server-only';
 
-// import 'server-only
+import slowThingsDown from './slowThingsDown';
 
 export default async function getComments() {
   const response = await fetch(`${process.env.API_ROUTE}/comments`, {

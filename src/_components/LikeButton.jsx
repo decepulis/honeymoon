@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 
+// import likeComment from '@/_utils/likeComment'
+
 export default function LikeButton({ id }) {
   const [markAsLiked, setMarkAsLiked] = useState(false);
 

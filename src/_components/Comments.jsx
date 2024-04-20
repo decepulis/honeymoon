@@ -1,6 +1,10 @@
 import LikeButton from '@/_components/LikeButton';
 
+// import getComments from '@/_utils/getComments';
+// import 'server-only';
+
 export default function Comments({ comments }) {
+  // const comments = await getComments();
   return (
     <section>
       <h2 className="mb-4 mt-8 font-display text-2xl">Comments</h2>

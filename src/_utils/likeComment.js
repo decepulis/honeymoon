@@ -11,6 +11,7 @@ export default async function likeComment(formData) {
     },
   });
   if (response.ok) {
+    // tl;dr refresh the getComments function (and the comments component)
     revalidateTag('comments');
   } else {
     console.error(`Failed to like comment: ${response.status} ${response.statusText}`);
