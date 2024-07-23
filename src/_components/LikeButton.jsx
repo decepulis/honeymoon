@@ -7,7 +7,8 @@ import { useState } from 'react';
 export default function LikeButton({ id }) {
   const [markAsLiked, setMarkAsLiked] = useState(false);
 
-  const like = () => {
+  const like = (e) => {
+    e.preventDefault();
     // update UI
     setMarkAsLiked(true);
 
@@ -25,13 +26,16 @@ export default function LikeButton({ id }) {
   };
 
   return (
-    <button
-      disabled={markAsLiked}
-      onClick={like}
-      aria-label="Like comment"
-      className="h-12 w-12 rounded-sm hover:bg-emerald-200/20 focus:bg-emerald-200/20"
-    >
-      {markAsLiked ? '❤️' : '🤍'}
-    </button>
+    <form onSubmit={like}>
+      <input type="hidden" name="id" value={id} />
+      <button
+        type="submit"
+        disabled={markAsLiked}
+        aria-label="Like comment"
+        className="h-12 w-12 rounded-sm hover:bg-emerald-200/20 focus:bg-emerald-200/20"
+      >
+        {markAsLiked ? '❤️' : '🤍'}
+      </button>
+    </form>
   );
 }
