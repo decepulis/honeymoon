@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import * as Collapsible from '@radix-ui/react-collapsible';
 
-export default function Comments({ title = 'Default title' }) {
+export default function Comments({ children, title = 'Default title' }) {
   const [open, setOpen] = useState(true);
   return (
     <Collapsible.Root open={open} onOpenChange={setOpen} className="grid">
@@ -12,7 +12,7 @@ export default function Comments({ title = 'Default title' }) {
         <span>{open ? '△' : '▽'}</span>
         <span>{title}</span>
       </Collapsible.Trigger>
-      <Collapsible.Content>Add comments here</Collapsible.Content>
+      <Collapsible.Content>{children}</Collapsible.Content>
     </Collapsible.Root>
   );
 }

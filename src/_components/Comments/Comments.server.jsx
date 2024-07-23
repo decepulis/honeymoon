@@ -1,13 +1,12 @@
+import 'server-only';
+
 import LikeButton from '@/_components/LikeButton';
+import getComments from '@/_utils/getComments';
 
-// import getComments from '@/_utils/getComments';
-// import 'server-only';
-
-export default function Comments({ comments }) {
-  // const comments = await getComments();
+export default async function Comments() {
+  const comments = await getComments();
   return (
     <section>
-      <h2 className="mb-4 mt-8 font-display text-2xl">Comments</h2>
       <ul className="-mx-4 mb-4">
         {comments.map((comment) => (
           <li key={comment.id} className="mb-4 flex items-center gap-4 border-b pb-4">
